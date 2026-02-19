@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #111111;
+  --color-french-beige: #AD7D56;
+  --color-rodeo-dust: #CDB49E;
+  --color-ivory: #F5F1EC;
+    
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-scale-x: scale-x 1s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes scale-x {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+/* Define semantic CSS variables for theming */
+:root {
+  --bg-primary: var(--color-ivory);
+  --bg-secondary: #FFFFFF;
+  --text-primary: var(--color-charcoal);
+  --text-secondary: rgba(17, 17, 17, 0.7);
+  --text-inverse: var(--color-ivory);
+  --accent-primary: var(--color-french-beige);
+  --accent-secondary: var(--color-rodeo-dust);
+  --border-color: rgba(17, 17, 17, 0.1);
+  --card-bg: #FFFFFF;
+  --card-hover: rgba(205, 180, 158, 0.1); /* Rodeo Dust hint */
+}
+
+/* Dark mode overrides (applied when 'dark' class is present on html/body) */
+.dark {
+  --bg-primary: var(--color-charcoal);
+  --bg-secondary: #1A1A1A; /* Slightly lighter for contrast */
+  --text-primary: var(--color-ivory);
+  --text-secondary: rgba(245, 241, 236, 0.7);
+  --text-inverse: var(--color-charcoal);
+  --accent-primary: var(--color-french-beige); /* Sticks out well on dark too */
+  --accent-secondary: var(--color-rodeo-dust);
+  --border-color: rgba(245, 241, 236, 0.1);
+  --card-bg: #1A1A1A;
+  --card-hover: rgba(205, 180, 158, 0.15);
+}
+
+@layer base {
+  body {
+    /* Use the semantic variables */
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    antialiased: true;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  ::selection {
+    background-color: var(--color-rodeo-dust);
+    color: var(--color-charcoal);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
