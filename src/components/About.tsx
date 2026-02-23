@@ -26,13 +26,15 @@ export const About = () => {
 
                 <div className="md:col-span-3 relative">
                     <ScrollReveal delay={400}>
-                        <div className="absolute -top-6 -left-6 w-24 h-24 bg-[var(--accent-secondary)] opacity-20 -z-10 rounded-sm"></div>
+                        {/* Decorative Accent - Improved from a simple square to a soft, modern floating blob */}
+                        <div className="absolute -top-12 -left-12 w-32 h-32 bg-gradient-to-br from-[var(--accent-secondary)] to-transparent opacity-30 -z-10 rounded-full blur-2xl animate-soft-pulse"></div>
+
                         <div className="space-y-6 text-lg md:text-xl font-light text-[var(--text-secondary)] leading-relaxed">
                             <p>
-                                I am a Junior Developer passionate about building intelligent systems that live on the cloud. My work focuses on integrating AI capabilities into scalable web applications, ensuring they are not just smart, but also efficient and user-centric.
+                                I am a <span className="text-[var(--text-primary)] font-medium italic">Full-Stack Developer</span> who thrives at the intersection of elegant frontend design and robust backend architecture. While I am deeply interested in building efficient APIs and scalable systems, I am equally passionate about crafting polished, user-centric interfaces that make complex technology feel intuitive.
                             </p>
                             <p>
-                                I specialize in the modern web stack—React, Tailwind, and Firebase—while leveraging Google Cloud Platform for backend robustness. I believe in code that is clean, maintainable, and built for the future.
+                                I am currently diving deep into <span className="text-[var(--accent-primary)] font-medium">Applied Machine Learning</span> and cloud automation, driven by a constant hunger to learn and evolve. My focus is on engineering <span className="text-[var(--text-primary)] font-medium">reliable, high-performance applications</span> on GCP and Firebase. I believe the best software is never finished—it is continuously refined.
                             </p>
                         </div>
                     </ScrollReveal>

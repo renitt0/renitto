@@ -12,6 +12,7 @@
 
   --animate-scale-x: scale-x 1s ease-out forwards;
   --animate-float: float 6s ease-in-out infinite;
+  --animate-soft-pulse: soft-pulse 4s ease-in-out infinite;
 
   @keyframes scale-x {
     from { transform: scaleX(0); }
@@ -21,6 +22,11 @@
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
+  }
+
+  @keyframes soft-pulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.1); }
   }
 }
 
