@@ -7,7 +7,7 @@ const projects = [
         description: "A real-time inventory tracking system designed for pharmacies to manage stock levels, expiration alerts, and supplier orders efficiently."
     },
     {
-        title: "Weight Management Application",
+        title: "Health Progress Tracking Application",
         stack: "React • Node.js • MongoDB",
         description: "A mobile-first application helping users track nutrition, set goals, and visualize progress through intuitive data visualization."
     },
